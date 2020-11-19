@@ -1,6 +1,6 @@
 import 'package:famintos_mobile/src/pages/categoria/categoria.dart';
 import 'package:famintos_mobile/src/pages/listaCardapio/comboEspecial.dart';
-import 'package:famintos_mobile/src/pages/lista/menulist.dart';
+import 'package:famintos_mobile/src/pages/menuDrawer/menulist.dart';
 import 'package:famintos_mobile/src/pages/listaCardapio/pizzaPage.dart';
 import 'package:famintos_mobile/src/pages/listaCardapio/sanduichesPage.dart';
 import 'package:flutter/material.dart';
