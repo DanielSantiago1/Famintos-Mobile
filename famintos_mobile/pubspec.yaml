@@ -61,6 +61,7 @@ flutter:
   assets:
     - assets/images/icon_famintos.png
     - assets/images/icon_splash.png
+    - assets/images/icon_aceito.png
     - assets/images/moca.png
 
   # An image asset can refer to one or more resolution-specific "variants", see

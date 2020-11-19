@@ -1,8 +1,8 @@
-import 'package:famintos_mobile/src/pages/listaCategoria/bebidasPages.dart';
-import 'package:famintos_mobile/src/pages/listaCategoria/comboEspecial.dart';
+import 'package:famintos_mobile/src/pages/categoria/categoria.dart';
+import 'package:famintos_mobile/src/pages/listaCardapio/comboEspecial.dart';
 import 'package:famintos_mobile/src/pages/lista/menulist.dart';
-import 'package:famintos_mobile/src/pages/listaCategoria/pizzaPage.dart';
-import 'package:famintos_mobile/src/pages/listaCategoria/sanduichesPage.dart';
+import 'package:famintos_mobile/src/pages/listaCardapio/pizzaPage.dart';
+import 'package:famintos_mobile/src/pages/listaCardapio/sanduichesPage.dart';
 import 'package:flutter/material.dart';
 
 /// This is the main application widget.
@@ -125,7 +125,7 @@ class _CardapioPageState extends State<CardapioPage> {
                       onTap: () => Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => BebidasPage()),
+                            builder: (context) => CategotiaPage()),
                       ),
                       child: Container(
                         color: Colors.brown[300],
