@@ -1,4 +1,6 @@
-import 'package:famintos_mobile/src/pages/listaCategoria/comboEspecial.dart';
+import 'package:famintos_mobile/src/pages/listaCategoria/refrigerantePage.dart';
+import 'package:famintos_mobile/src/pages/listaCategoria/sucoPage.dart';
+import 'package:famintos_mobile/src/pages/pedidoAceito/pedidoAceito.dart';
 import 'package:flutter/material.dart';
 
 class CategotiaPage extends StatefulWidget {
@@ -27,88 +29,114 @@ class _CategotiaPageState extends State<CategotiaPage> {
             padding: const EdgeInsets.all(25.0),
             child: Column(
               children: <Widget>[
-                Card(
-                  child: InkWell(
-                    splashColor: Colors.blue.withAlpha(30),
-                    onTap: () {
-                      print('Card tapped.');
-                    },
-                    child: Container(
-                      color: Colors.brown[300],
-                      width: 300,
-                      height: 100,
-                        child: Center(
-                          child: ListView(
-                            children: <Widget>[
-                              ListTile(
-                                title: Text(
-                                  'Categoria',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 18,
-                                  ),
-
-                                ),subtitle: Text(
-                                'Refrigerante',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 15,
-                                ),
-                              ),
-                                onTap: () => Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => ComboEspecialPage()),
-                                ),
-                              ),
-                            ],
-                          ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Card(
+                    child: InkWell(
+                        splashColor: Colors.blue.withAlpha(30),
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => RefrigentantePage()),
                         ),
+                        child: Container(
+                          color: Colors.brown[300],
+                          width: 300,
+                          height: 100,
+                          child: Center(
+                            child: Text('REFRIGERANTE',
+                              style: TextStyle(
+                                  fontSize: 28,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                        )
                     ),
                   ),
                 ),
-                Card(
-                  child: InkWell(
-                    splashColor: Colors.blue.withAlpha(30),
-                    onTap: () {
-                      print('Card tapped.');
-                    },
-                    child: Container(
-                      color: Colors.brown,
-                      width: 300,
-                      height: 100,
-                      child: Text('A card that can be tapped'),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Card(
+                    child: InkWell(
+                        splashColor: Colors.blue.withAlpha(30),
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SucoPage()),
+                        ),
+                        child: Container(
+                          color: Colors.brown[300],
+                          width: 300,
+                          height: 100,
+                          child: Center(
+                            child: Text('SUCO',
+                              style: TextStyle(
+                                  fontSize: 28,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                        )
                     ),
                   ),
                 ),
-                Card(
-                  child: InkWell(
-                    splashColor: Colors.blue.withAlpha(30),
-                    onTap: () {
-                      print('Card tapped.');
-                    },
-                    child: Container(
-                      color: Colors.brown,
-                      width: 300,
-                      height: 100,
-                      child: Text('A card that can be tapped'),
-                    ),
-                  ),
-                ),
-                Card(
-                  child: InkWell(
-                    splashColor: Colors.blue.withAlpha(30),
-                    onTap: () {
-                      print('Card tapped.');
-                    },
-                    child: Container(
-                      color: Colors.brown,
-                      width: 300,
-                      height: 100,
-                      child: Text('A card that can be tapped'),
-                    ),
-                  ),
-                ),
+                // Padding(
+                //   padding: const EdgeInsets.all(8.0),
+                //   child: Card(
+                //     child: InkWell(
+                //         splashColor: Colors.blue.withAlpha(30),
+                //         onTap: () => Navigator.push(
+                //           context,
+                //           MaterialPageRoute(
+                //               builder: (context) => SanduichePage()),
+                //         ),
+                //         child: Container(
+                //           color: Colors.brown[300],
+                //           width: 300,
+                //           height: 100,
+                //           child: Center(
+                //             child: Text('SANDUICHES',
+                //               style: TextStyle(
+                //                   fontSize: 28,
+                //                   fontWeight: FontWeight.bold,
+                //                   color: Colors.black
+                //               ),
+                //             ),
+                //           ),
+                //         )
+                //     ),
+                //   ),
+                // ),
+                // Padding(
+                //   padding: const EdgeInsets.all(8.0),
+                //   child: Card(
+                //     child: InkWell(
+                //       splashColor: Colors.blue.withAlpha(30),
+                //       onTap: () => Navigator.push(
+                //         context,
+                //         MaterialPageRoute(
+                //             builder: (context) => CategotiaPage()),
+                //       ),
+                //       child: Container(
+                //           color: Colors.brown[300],
+                //           width: 300,
+                //           height: 100,
+                //           child: Center(
+                //             child: Text('BEBIDAS',
+                //               style: TextStyle(
+                //                   fontSize: 28,
+                //                   fontWeight: FontWeight.bold,
+                //                   color: Colors.black
+                //               ),
+                //             ),
+                //           )
+                //       ),
+                //     ),
+                //   ),
+                // ),
               ],
             ),
           ),
