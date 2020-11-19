@@ -1,10 +1,8 @@
 import 'package:famintos_mobile/src/pages/cardapio/cardapio.dart';
-
 import 'package:famintos_mobile/src/pages/categoria/categoria.dart';
 import 'package:famintos_mobile/src/pages/comandaPage/comandaPage.dart';
 import 'package:famintos_mobile/src/pages/sobre/sobre.dart';
 import 'package:flutter/material.dart';
-import 'dart:io';
 
 class MenuList extends StatelessWidget {
 
