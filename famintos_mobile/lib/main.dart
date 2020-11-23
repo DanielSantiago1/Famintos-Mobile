@@ -1,4 +1,4 @@
-import 'package:famintos_mobile/src/pages/animation/intro.dart';
+import 'package:famintos_mobile/src/views/animation/intro.dart';
 import 'package:flutter/material.dart';
 
 void main() {
