@@ -54,6 +54,9 @@ class _CardapioPageState extends State<CardapioPage> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                    ),
                     child: InkWell(
                         splashColor: Colors.brown.withAlpha(30),
                         onTap: () => Navigator.push(
@@ -86,7 +89,8 @@ class _CardapioPageState extends State<CardapioPage> {
                         onTap: () => Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => PizzaPage()),
+                              builder: (context) => PizzaPage()
+                          ),
                         ),
                       child: Container(
                         color: Colors.brown[300],
@@ -113,7 +117,8 @@ class _CardapioPageState extends State<CardapioPage> {
                         onTap: () => Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => SanduichePage()),
+                              builder: (context) => SanduichePage()
+                          ),
                         ),
                       child: Container(
                         color: Colors.brown[300],
@@ -134,6 +139,7 @@ class _CardapioPageState extends State<CardapioPage> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
+
                   child: Card(
                     child: InkWell(
                       splashColor: Colors.blue.withAlpha(30),
@@ -143,6 +149,7 @@ class _CardapioPageState extends State<CardapioPage> {
                             builder: (context) => CategotiaPage()),
                       ),
                       child: Container(
+
                         color: Colors.brown[300],
                         width: 300,
                         height: 100,

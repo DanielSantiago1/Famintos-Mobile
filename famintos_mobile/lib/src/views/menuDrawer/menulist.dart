@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:famintos_mobile/src/views/produtos/cardapio.dart';
-import 'package:famintos_mobile/src/views/produtos/categoria.dart';
 import 'package:famintos_mobile/src/views/produtos/comandaPage.dart';
+import 'package:famintos_mobile/src/views/produtos/finalizarComprar.dart';
 import 'package:famintos_mobile/src/views/sobre/sobre.dart';
 import 'package:flutter/material.dart';
 
@@ -43,10 +43,10 @@ class MenuList extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text("Categoria".toUpperCase(), style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+            title: Text("Finalizar Comprar".toUpperCase(), style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
             onTap: (){
               Navigator.push(context, MaterialPageRoute(
-                  builder: (BuildContext context) => CategotiaPage()));
+                  builder: (BuildContext context) => FinalizarComprar()));
             },
           ),
           ListTile(

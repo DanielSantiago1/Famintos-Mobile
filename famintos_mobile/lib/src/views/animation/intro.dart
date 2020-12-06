@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:famintos_mobile/src/views/login/login.page.dart';
 import 'package:famintos_mobile/src/views/animation/loader_animator.dart';
-
 import 'package:flutter/material.dart';
 
 
