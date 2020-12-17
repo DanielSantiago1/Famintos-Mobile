@@ -84,6 +84,16 @@ class _SobrePageState extends State<SobrePage> {
               padding: const EdgeInsets.all(15.0),
               child: Image.asset('assets/images/icon_famintos.png'),
             ),
+            Divider(height: 25),
+            Row(mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text('Versão 0.0.0', 
+                  style: TextStyle(
+                  fontSize: 18,
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),

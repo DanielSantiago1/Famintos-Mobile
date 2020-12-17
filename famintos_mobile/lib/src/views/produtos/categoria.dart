@@ -1,5 +1,6 @@
 import 'package:famintos_mobile/src/componente/bebidaProdutoWidget/bebidaProdutoBloc.dart';
 import 'package:famintos_mobile/src/models/bebidaModel..dart';
+import 'package:famintos_mobile/src/models/comandaModel.dart';
 import 'package:flutter/material.dart';
 
 class CategotiaPage extends StatefulWidget {
@@ -11,6 +12,8 @@ class _CategotiaPageState extends State<CategotiaPage> {
 
 
   BebidaProdutosBloc bloc;
+
+  var _comanda = Comanda();
 
   @override
   void initState() {
@@ -52,11 +55,21 @@ class _CategotiaPageState extends State<CategotiaPage> {
             itemBuilder: (BuildContext context, int index) {
               BebidaModel bebidaModel = bebidaModels[index];
 
-              return ListTile(
-                leading: CircleAvatar(child: Text("${bebidaModel.id}")),
-                title: Text(bebidaModel.nome),
-                subtitle: Text(bebidaModel.descricao),
-                trailing: Text(bebidaModel.valor),
+              return Center(
+                child: Column(
+                  children: [
+                    ListTile(
+                      leading: CircleAvatar(child: Text("${bebidaModel.id}")),
+                      title: Text(bebidaModel.nome),
+                      subtitle: Text(bebidaModel.descricao),
+                      trailing: Text('R\$ ${bebidaModel.valor}'),
+                      onTap: (){
+                        _comanda.adicionar(bebidaModels[index]);
+                        print(_comanda);
+                      },
+                    ),
+                  ],
+                ),
               );
             },
 

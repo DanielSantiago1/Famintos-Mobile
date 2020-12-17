@@ -1,4 +1,5 @@
 import 'package:famintos_mobile/src/componente/sanduicheProdutoWidget/sanduicheProdutoBloc.dart';
+import 'package:famintos_mobile/src/models/comandaModel.dart';
 import 'package:famintos_mobile/src/models/sanduicheModel.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +11,8 @@ class SanduichePage extends StatefulWidget {
 class _SanduichePageState extends State<SanduichePage> {
 
   SanduicheProdutosBloc bloc;
+
+  var _comanda = Comanda();
 
   @override
   void initState() {
@@ -54,13 +57,17 @@ class _SanduichePageState extends State<SanduichePage> {
                 leading: CircleAvatar(child: Text("${sanduicheModel.id}")),
                 title: Text(sanduicheModel.nome),
                 subtitle: Text(sanduicheModel.descricao),
-                trailing: Text(sanduicheModel.valor),
+                trailing: Text('R\$ ${sanduicheModel.valor}'),
+                onTap: (){
+                  _comanda.adicionar(sanduicheModels[index]);
+                  print(_comanda);
+                },
               );
             },
-
           );
         },
       ),
     );
   }
+  
 }

@@ -1,14 +1,21 @@
 
+import 'package:famintos_mobile/src/models/comandaModel.dart';
+import 'package:flutter/material.dart';
+
 import 'package:famintos_mobile/src/componente/comboProdutoWidget/comboProdutoBloc.dart';
 import 'package:famintos_mobile/src/models/comboModel.dart';
-import 'package:flutter/material.dart';
+import 'package:famintos_mobile/src/views/produtos/comandaPage.dart';
 
 class ComboEspecialPage extends StatefulWidget {
   @override
   _ComboEspecialPageState createState() => _ComboEspecialPageState();
 }
 
+
+
 class _ComboEspecialPageState extends State<ComboEspecialPage> {
+
+  var _comanda = Comanda();
 
   ProdutosBloc bloc;
 
@@ -26,8 +33,10 @@ class _ComboEspecialPageState extends State<ComboEspecialPage> {
 
   @override
   Widget build(BuildContext context) {
+    
 
     return Scaffold(
+      
       appBar: AppBar(
         backgroundColor: Color(0xff6D4C41),
         title: const Text('COMBO ESPECIAL'),
@@ -56,13 +65,19 @@ class _ComboEspecialPageState extends State<ComboEspecialPage> {
                 leading: CircleAvatar(child: Text("${comboModel.id}")),
                 title: Text(comboModel.nome),
                 subtitle: Text(comboModel.descricao),
-                trailing: Text(comboModel.valor),
+                trailing: Text('R\$ ${comboModel.valor}'),
+                onTap: (){
+                  _comanda.adicionar(comboModels[index]);
+                  print(_comanda);
+                },
               );
             },
-
           );
         },
       ),
     );
   }
 }
+
+
+              

@@ -1,4 +1,5 @@
 import 'package:famintos_mobile/src/componente/pizzaProdutoWidget/pizzaProdutoBloc.dart';
+import 'package:famintos_mobile/src/models/comandaModel.dart';
 import 'package:famintos_mobile/src/models/pizzaModel.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +12,8 @@ class PizzaPage extends StatefulWidget {
 class _PizzaPageState extends State<PizzaPage> {
   
   PizzaProdutosBloc bloc;
+
+  var _comanda = Comanda();
 
   @override
   void initState() {
@@ -55,10 +58,13 @@ class _PizzaPageState extends State<PizzaPage> {
                 leading: CircleAvatar(child: Text("${pizzaModel.id}")),
                 title: Text(pizzaModel.nome),
                 subtitle: Text(pizzaModel.descricao),
-                trailing: Text(pizzaModel.valor),
+                trailing: Text('R\$ ${pizzaModel.valor}'),
+                onTap: (){
+                  _comanda.adicionar(pizzaModels[index]);
+                  print(_comanda);
+                },
               );
             },
-
           );
         },
       ),

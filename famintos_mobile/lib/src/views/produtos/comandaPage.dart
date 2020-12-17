@@ -1,3 +1,4 @@
+import 'package:famintos_mobile/src/models/comandaModel.dart';
 import 'package:famintos_mobile/src/views/produtos/pedidoenviado.dart';
 import 'package:flutter/material.dart';
 
@@ -5,9 +6,16 @@ import 'package:flutter/material.dart';
 class ComandaPage extends StatefulWidget {
   @override
   _ComandaPageState createState() => _ComandaPageState();
+  
 }
 
 class _ComandaPageState extends State<ComandaPage> {
+
+  @override
+  void initState() {
+    super.initState();
+    Comanda();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +27,7 @@ class _ComandaPageState extends State<ComandaPage> {
       ),
       body: Row(
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Divider(height: 100),
           RaisedButton(
